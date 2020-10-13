@@ -45,9 +45,13 @@ version with:
 .. code:: bash
 
     # you may need to replace 'localhost:8008' if synapse is not configured
-    # to listen on port 8008.
+    # to listen on port 8008:
 
     curl http://localhost:8008/_synapse/admin/v1/server_version
+    
+    # Remotely, you can also use the following URL:
+    
+    curl https://my-synapse-server.com/_matrix/federation/v1/version
 
 Rolling back to older versions
 ------------------------------
