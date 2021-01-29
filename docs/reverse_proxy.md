@@ -56,6 +56,17 @@ server {
         # Increase client_max_body_size to match max_upload_size defined in homeserver.yaml
         client_max_body_size 50M;
     }
+    
+    # If you don't use delegation with .well-known, uncomment the following to disable logging 404s for this directory
+    # More info on delegation: https://github.com/matrix-org/synapse/blob/master/docs/delegate.md
+    #location /.well-known {
+    #    log_not_found off;
+    #}
+    
+    # If you want to serve a custom static landing page with your Synapse installation, uncomment the following:
+    #location / {
+    #    root /path/to/you/custom/landing;
+    #}
 }
 ```
 
